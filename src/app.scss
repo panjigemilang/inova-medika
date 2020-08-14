@@ -1,5 +1,13 @@
 @import "./Components/Commons/variables";
 
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Product Sans"), local("ProductSans"),
+    url("./Assets/fonts/Product-Sans-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +23,8 @@
 }
 
 body {
-  background-color: $block-one;
+  background-color: whitesmoke;
+  font-family: "Product Sans";
   height: 100%;
   margin: 0;
   outline: none;

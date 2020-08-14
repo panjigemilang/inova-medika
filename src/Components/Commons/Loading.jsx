@@ -17,14 +17,9 @@ export default function Loading() {
       firstRender.current = false
       return
     }
-
-    if (window.location.pathname.includes("/portofolio")) setActive(2)
-    else setActive(1)
-
     if (toggleLoading) {
       setClosing(!closing)
     }
-
     if (transition === "mounted" || transition === "unmounted") {
       setToggleLoading(!toggleLoading)
     }
@@ -38,8 +33,8 @@ export default function Loading() {
       <div
         className={`block-2 ${transition === "mounting" ? "show" : ""}`}
       ></div>
-      <div className={`block-3 ${closing ? "close" : ""}`}></div>
-      <div className={`loading-container ${closing ? "close" : "show"}`}>
+      <div className={`block-3 ${closing ? "tutup" : ""}`}></div>
+      <div className={`loading-container ${closing ? "tutup" : "show"}`}>
         <div className="container">
           <h1>Loading</h1>
         </div>

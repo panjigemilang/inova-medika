@@ -1,6 +1,7 @@
 import React from "react"
 import Index from "../../../Context"
 import DelayLink from "react-delay-link"
+import useDelayedUnmounting from "../../Utils/useDelayComponent"
 
 export default function Table({
   currentMedicine,
@@ -15,6 +16,9 @@ export default function Table({
     setPatient,
     setMedicine,
   } = React.useContext(Index)
+
+  const [transition, show] = useDelayedUnmounting(13000)
+  const delay = 800
 
   React.useEffect(() => {
     if (page - 1 < 1) return
@@ -56,7 +60,9 @@ export default function Table({
             <tr key={item.no}>
               <td>{item.no}</td>
               <td className="patient">
-                <DelayLink to={item.name}>{item.name}</DelayLink>
+                <DelayLink clickAction={show} delay={delay} to={item.name}>
+                  {item.name}
+                </DelayLink>
               </td>
               <td>{item.gender}</td>
               <td>{item.age}</td>

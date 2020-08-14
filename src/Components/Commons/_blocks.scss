@@ -1,6 +1,6 @@
 @each $block in $blocks {
   .block-#{$block} {
-    background-color: $block-one;
+    background-color: $light-primary;
     left: -30vw;
     height: 100vh;
     position: absolute;
@@ -94,19 +94,17 @@
   @include animation("show .5s linear 1 forwards", 0.05s);
 }
 
-.block-3.close {
+.block-3.tutup {
   @include animation("closing .8s linear 1 forwards", 0.09s);
 }
 
 .loading-container {
-  z-index: -2;
-
   &.show {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     @include animation("clip-show .8s linear 1 forwards", 0.05s);
   }
 
-  &.close {
+  &.tutup {
     @include animation("clip-close .8s ease-in-out 1 forwards", 0.08s);
   }
 }

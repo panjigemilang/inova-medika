@@ -7,7 +7,12 @@ import Skeleton from "react-loading-skeleton"
 import "./patient.scss"
 
 function Patient({ history, match }) {
-  const { patients, toggleLoading, setToggleLoading } = React.useContext(Index)
+  const {
+    patients,
+    toggleLoading,
+    setToggleLoading,
+    transition,
+  } = React.useContext(Index)
   const [menuActive, setMenuActive] = React.useState(1)
   const patient = patients.filter(
     (item) => item.name === match.params.patient_name
@@ -15,7 +20,7 @@ function Patient({ history, match }) {
 
   React.useEffect(() => {
     setToggleLoading(!toggleLoading)
-  }, [])
+  }, [transition])
 
   return (
     <div className="patient-app">

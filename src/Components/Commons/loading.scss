@@ -2,7 +2,7 @@
 @import "blocks";
 
 .block-2 {
-  background-color: $block-two;
+  background-color: $light-secondary;
 }
 
 .block-3 {
@@ -10,9 +10,10 @@
 }
 
 .loading-container {
-  background-color: $dark-primary;
+  background-color: whitesmoke;
   color: $text-light-primary;
   height: 100vh;
+  opacity: 1;
   position: absolute;
   top: 0;
   width: 100vw;
