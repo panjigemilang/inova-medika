@@ -1,0 +1,65 @@
+@import "../Commons/variables";
+
+nav.pagination-app {
+  margin-top: 15px;
+  width: 90%;
+
+  ul {
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    height: 65%;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+
+    li {
+      margin: auto;
+
+      a {
+        background-color: #fff;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        margin: 0 5px;
+        line-height: 1.25;
+        position: relative;
+        padding: 0.5rem 0.75rem;
+
+        &:hover {
+          background-color: #e9ecef;
+          border-color: grey;
+          color: grey;
+          text-decoration: none;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          outline: 0;
+        }
+      }
+
+      &:first-child.arrow-left,
+      &:last-child.arrow-right {
+        a {
+          background-color: transparent;
+          color: white;
+        }
+      }
+    }
+
+    li.active {
+      a {
+        background-color: $light-secondary;
+        border-color: $light-secondary;
+        color: #fff;
+        z-index: 3;
+
+        &:hover {
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+}

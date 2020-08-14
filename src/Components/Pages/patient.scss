@@ -1,0 +1,98 @@
+@import "../../prefix";
+
+.patient-app {
+  background: rgba(160, 233, 218, 0.219);
+  background: linear-gradient(
+    145deg,
+    rgba(160, 233, 218, 0.3) 0%,
+    rgba(97, 210, 187, 0.3) 46%,
+    rgba(87, 165, 149, 0.3) 100%
+  );
+  height: 100%;
+  min-height: 100vh;
+  margin-left: 64px;
+
+  i {
+    color: rgb(3, 75, 53);
+    cursor: pointer;
+    font-size: 3em;
+    margin: 15px;
+    text-shadow: 0 5px 11px rgba(0, 0, 0, 0.18), 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      @include prefix(transform, scale(1.08), webkit ms);
+    }
+  }
+
+  .row {
+    margin: 10px;
+  }
+
+  .profile,
+  .data {
+    background-color: white;
+    border-radius: 15px;
+
+    width: 100%;
+  }
+
+  .profile {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    .img-box {
+      padding: 15px;
+
+      img {
+        border-radius: 15px;
+        object-fit: cover;
+        object-position: 50% 35%;
+        height: 300px;
+        width: 100%;
+      }
+    }
+
+    .data {
+      padding: 0 15px 15px;
+
+      h2 {
+        margin-top: 0;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .col-9 {
+    .data {
+      border-top-left-radius: 0;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+        0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      padding: 15px 25px;
+      width: 95%;
+    }
+
+    nav.menu {
+      display: flex;
+
+      ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+          background-color: whitesmoke;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          color: rgba(5, 5, 5, 0.603);
+          cursor: pointer;
+          list-style: none;
+          padding: 5px 15px;
+
+          &.active {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}

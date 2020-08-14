@@ -1,0 +1,57 @@
+@import "./Components/Commons/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color: $text-dark-primary;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.App {
+  background-image: url("./Assets/img/Wallpaper.svg");
+  object-fit: cover;
+}
+
+body {
+  background-color: $block-one;
+  height: 100%;
+  margin: 0;
+  outline: none;
+  padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $light-primary;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus {
+    border: 1px solid rgba(123, 198, 183, 0.5);
+    border-radius: 12px;
+    outline: none;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  width: 100%;
+}
+
+@use 'media';

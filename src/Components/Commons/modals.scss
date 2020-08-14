@@ -1,0 +1,108 @@
+@import "../../prefix";
+@import "../Commons/variables";
+
+.modals-app {
+  display: table;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+
+  &.hide {
+    display: none;
+  }
+
+  .overlay {
+    background-color: white;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .modal-custom {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    i.fa-times-circle {
+      color: rgb(3, 75, 53);
+      cursor: pointer;
+      font-size: 3em;
+      text-shadow: 0 5px 11px rgba(0, 0, 0, 0.18),
+        0 4px 15px rgba(0, 0, 0, 0.15);
+      position: absolute;
+      top: 15px;
+      left: 5vw;
+
+      &:hover {
+        @include prefix(transform, scale(1.08), webkit ms);
+      }
+    }
+
+    .modal-head {
+      h1 {
+        font-weight: 700;
+      }
+    }
+
+    .modal-body {
+      background: rgb(160, 233, 218);
+      background: linear-gradient(
+        145deg,
+        rgba(160, 233, 218, 1) 0%,
+        rgba(97, 210, 187, 1) 46%,
+        rgba(87, 165, 149, 1) 100%
+      );
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+        0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 38% 15vh;
+      padding: 15px 25px;
+
+      input,
+      button,
+      select {
+        border: 0;
+        border-radius: 10px;
+        height: 45px;
+
+        &:focus {
+          border: 1px $light-boundary solid;
+          border-radius: 10px;
+          outline: 0;
+        }
+      }
+
+      input {
+        margin: 15px 0;
+        padding: 15px;
+      }
+
+      select {
+        padding: 0 10px;
+      }
+
+      button {
+        color: whitesmoke;
+        font-weight: 500;
+        width: 100%;
+      }
+
+      .col-6:first-child {
+        button {
+          background-color: $button-submit;
+        }
+      }
+
+      .col-6:last-child {
+        button {
+          background-color: $button-cancel;
+        }
+      }
+    }
+  }
+}

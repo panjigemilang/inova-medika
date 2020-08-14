@@ -1,0 +1,65 @@
+@import "../../prefix";
+@import "../Commons/variables";
+
+.app {
+  display: table;
+  height: 100vh;
+  width: 100%;
+
+  .login-form {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    form {
+      background: rgb(160, 233, 218);
+      background: linear-gradient(
+        145deg,
+        rgba(160, 233, 218, 1) 0%,
+        rgba(97, 210, 187, 1) 46%,
+        rgba(87, 165, 149, 1) 100%
+      );
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 38% 15vh;
+      padding: 15px 25px;
+
+      input,
+      button {
+        border: 0;
+        border-radius: 10px;
+      }
+
+      input {
+        height: 45px;
+        margin: 15px 0;
+        padding: 15px;
+
+        &:focus {
+          border: 1px $light-boundary solid;
+          border-radius: 10px;
+          outline: 0;
+        }
+      }
+
+      button {
+        background-color: white;
+        @include prefix(transition, 0.5s ease-in-out, webkit moz o);
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+          0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 900;
+        margin: 25px auto;
+        padding: 10px;
+        width: 40%;
+
+        &:hover {
+          filter: brightness(60%);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

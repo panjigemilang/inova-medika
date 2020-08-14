@@ -1,0 +1,61 @@
+@import "../Commons/variables";
+
+nav.custom-navbar {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  &.hide {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      cursor: pointer;
+      padding: 13px 0;
+      list-style: none;
+
+      &.active {
+        background-color: $light-primary;
+        pointer-events: none;
+      }
+
+      &:first-child {
+        pointer-events: none;
+        margin: 25px auto;
+      }
+
+      &:not(:first-child):hover {
+        background-color: $light-primary;
+      }
+
+      &:last-child {
+        margin-top: auto;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      img {
+        width: 4em;
+      }
+
+      div {
+        display: inline;
+      }
+    }
+  }
+}
